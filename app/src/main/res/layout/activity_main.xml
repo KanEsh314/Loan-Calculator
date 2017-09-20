@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="my.com.itrain.lcalculator.MainActivity">
+
+  <EditText
+    android:id="@+id/property"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="50dp"
+    android:ems="10"
+    android:inputType="number|numberDecimal"
+    android:hint="Property Price(RM)" />
+
+  <EditText
+    android:id="@+id/payment"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignStart="@+id/property"
+    android:layout_below="@+id/property"
+    android:layout_marginTop="55dp"
+    android:ems="10"
+    android:inputType="number|numberDecimal"
+    android:hint="Down Payment(RM)" />
+
+  <EditText
+    android:id="@+id/interest"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignStart="@+id/payment"
+    android:layout_below="@+id/payment"
+    android:layout_marginTop="60dp"
+    android:ems="10"
+    android:inputType="number|numberDecimal"
+    android:hint="Interest Rate(%)" />
+
+
+  <EditText
+    android:id="@+id/year"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignEnd="@+id/interest"
+    android:layout_alignStart="@+id/interest"
+    android:layout_below="@+id/interest"
+    android:layout_marginTop="65dp"
+    android:ems="10"
+    android:inputType="textPersonName"
+    android:text="Loan Period(Year)" />
+
+  <TextView
+    android:id="@+id/cal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="46dp"
+    android:layout_above="@+id/calculate"
+    android:layout_alignStart="@+id/year"
+    android:layout_marginStart="6dp"
+    android:layout_alignEnd="@+id/year" />
+
+  <Button
+    android:id="@+id/calculate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Calculate"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="50dp" />
+
+</RelativeLayout>
