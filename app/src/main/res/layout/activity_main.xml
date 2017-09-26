@@ -1,75 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  tools:context="my.com.itrain.lcalculator.MainActivity">
-
-  <EditText
-    android:id="@+id/property"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="50dp"
-    android:ems="10"
-    android:inputType="number|numberDecimal"
-    android:hint="Property Price(RM)" />
-
-  <EditText
-    android:id="@+id/payment"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignStart="@+id/property"
-    android:layout_below="@+id/property"
-    android:layout_marginTop="55dp"
-    android:ems="10"
-    android:inputType="number|numberDecimal"
-    android:hint="Down Payment(RM)" />
-
-  <EditText
-    android:id="@+id/interest"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignStart="@+id/payment"
-    android:layout_below="@+id/payment"
-    android:layout_marginTop="60dp"
-    android:ems="10"
-    android:inputType="number|numberDecimal"
-    android:hint="Interest Rate(%)" />
-
-
-  <EditText
-    android:id="@+id/year"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignEnd="@+id/interest"
-    android:layout_alignStart="@+id/interest"
-    android:layout_below="@+id/interest"
-    android:layout_marginTop="65dp"
-    android:ems="10"
-    android:inputType="textPersonName"
-    android:text="Loan Period(Year)" />
-
-  <TextView
-    android:id="@+id/cal"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="46dp"
-    android:layout_above="@+id/calculate"
-    android:layout_alignStart="@+id/year"
-    android:layout_marginStart="6dp"
-    android:layout_alignEnd="@+id/year" />
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="my.com.itrain.simpleloancalculator.MainActivity">
 
-  <Button
-    android:id="@+id/calculate"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Calculate"
-    android:layout_alignParentBottom="true"
-    android:layout_centerHorizontal="true"
-    android:layout_marginBottom="50dp" />
 
-</RelativeLayout>
+    <EditText
+        android:id="@+id/property"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:inputType="numberDecimal"
+        android:layout_margin="16dp"
+        android:textColor="@color/colorBlack"
+        android:hint="Purchase Price(RM)" />
+
+    <EditText
+        android:id="@+id/down"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:textColor="@color/colorBlack"
+        android:inputType="numberDecimal"
+        android:hint="Down Payment(RM)" />
+
+    <EditText
+        android:id="@+id/interest"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:textColor="@color/colorBlack"
+        android:inputType="numberDecimal"
+        android:hint="Interest Rate(%)" />
+
+    <EditText
+        android:id="@+id/year"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        android:textColor="@color/colorBlack"
+        android:inputType="numberDecimal"
+        android:hint="Loan Term(Year)" />
+
+    <Button
+        android:id="@+id/loan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/monthly"
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="@color/colorRed"
+        android:layout_height="wrap_content" />
+</LinearLayout>

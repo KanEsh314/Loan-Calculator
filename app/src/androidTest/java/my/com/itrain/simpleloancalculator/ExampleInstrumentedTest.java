@@ -1,4 +1,4 @@
-package my.com.itrain.lcalculator;
+package my.com.itrain.simpleloancalculator;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -16,11 +16,11 @@ import static org.junit.Assert.*;
  */
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
-  @Test
-  public void useAppContext() throws Exception {
-    // Context of the app under test.
-    Context appContext = InstrumentationRegistry.getTargetContext();
+    @Test
+    public void useAppContext() throws Exception {
+        // Context of the app under test.
+        Context appContext = InstrumentationRegistry.getTargetContext();
 
-    assertEquals("my.com.itrain.lcalculator", appContext.getPackageName());
-  }
+        assertEquals("my.com.itrain.simpleloancalculator", appContext.getPackageName());
+    }
 }
